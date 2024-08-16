@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Aditya Singh</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/my-avatar.png" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Aditya Singh</h1>
+                    <p> As a skilled Frontend and Web Developer, I specialize in creating responsive, user-friendly websites and web applications. With expertise in HTML, CSS, JavaScript, and modern frameworks, I bring designs to life with precision and ensure optimal performance across all devices. I am passionate about crafting seamless digital experiences that are both visually appealing and functionally robust.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="https://drive.google.com/file/d/1WjgdNBeQ6yEArY3q4Ubh5GiAGyV9HOpV/view?usp=sharing" class="btn active">Download CV</a>
+                       <a href="https://www.linkedin.com/in/aditya-singh-074b29221/" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
